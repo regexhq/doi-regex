@@ -1,0 +1,23 @@
+{
+  "name": "doi",
+  "version": "0.0.0",
+  "description": "Regex all the dois",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:BeagleLab/doi.git"
+  },
+  "keywords": [
+    "doi",
+    "beagle"
+  ],
+  "author": "Richard Littauer <richard.littauer@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BeagleLab/doi/issues"
+  },
+  "homepage": "https://github.com/BeagleLab/doi"
+}
