@@ -1,5 +1,5 @@
 {
-  "name": "doi",
+  "name": "doi-regex",
   "version": "0.0.0",
   "description": "Regex all the dois",
   "main": "index.js",
