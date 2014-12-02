@@ -1,10 +1,10 @@
 {
   "name": "doi-regex",
   "version": "0.0.0",
-  "description": "Regex all the dois",
+  "description": "Regular expression for matching DOIs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test.js"
   },
   "repository": {
     "type": "git",
@@ -12,12 +12,33 @@
   },
   "keywords": [
     "doi",
-    "beagle"
+    "beagle",
+    "regex",
+    "regexp",
+    "re",
+    "match",
+    "test",
+    "find",
+    "pattern",
+    "doi",
+    "digital object identifier",
+    "validate"
   ],
-  "author": "Richard Littauer <richard.littauer@gmail.com>",
+  "author": {
+    "name": "Richard Littauer",
+    "email": "richard.littauer@gmail.com",
+    "url": "http://www.burntfen.com"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/BeagleLab/doi/issues"
   },
-  "homepage": "https://github.com/BeagleLab/doi"
+  "homepage": "https://github.com/BeagleLab/doi",
+  "devDependencies": {
+    "ava": "0.0.4",
+    "lodash": "^2.4.1"
+  }
 }
