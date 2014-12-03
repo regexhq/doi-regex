@@ -50,6 +50,21 @@ Only match an exact string.
 Useful with `RegExp#test` to check if a string is an DOI.
 
 
+## CLI 
+
+A CLI file has been provided. Run any of the examples provided above using your own DOI. For instance: 
+
+```sh
+$ node cli-index.js -e `10.000/xyz1000`
+true
+```
+
+Possible Flags:
+
+	* -e, --exact	Find an exact match \n\
+	* -d, --declared 	Find a DOI with a 'doi:' prefix\n\
+	* -m, --match	Find all matches within the given string");
+
 ## License
 
 MIT © [Richard Littauer](http://burntfen.com)
