@@ -61,9 +61,9 @@ true
 
 Possible Flags:
 
-	* -e, --exact	Find an exact match \n\
-	* -d, --declared 	Find a DOI with a 'doi:' prefix\n\
-	* -m, --match	Find all matches within the given string");
+* -e, --exact	Find an exact match \n\
+* -d, --declared 	Find a DOI with a 'doi:' prefix\n\
+* -m, --match	Find all matches within the given string");
 
 ## License
 
