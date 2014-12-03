@@ -17,7 +17,8 @@ if (process.argv.length <= 2) {
 var flags = {
 	"exact": ['-e', '--exact'],
 	"declared": ['-d', '--declared'],
-	"match": ['-m', '--match']
+	"match": ['-m', '--match'],
+	"groups": ['-g', '--groups']
 };
 
 for (var index in flags) {
@@ -27,22 +28,27 @@ for (var index in flags) {
 			flags[index] = true
 		}
 	})
+
+	if (flags[index] !== true) {
+		flags[index] = null
+	}
 }
 
 var doi = process.argv[2];
 
 if (flags.match === true) {
 	console.log(doi.match(doiRegex()))
+} else if (flags.groups === true) {
+	console.log(doiRegex.groups(doi));
 } else {
-	if (flags.exact !== true && flags.declared !== true) {
-		console.log('Does a DOI exist?', doiRegex().test(doi))
-	} else if (flags.exact === true && flags.declared !== true) {
-		console.log('Is this a DOI?', doiRegex({exact: true}).test(doi))
-	} else if (flags.exact !== true && flags.declared === true) {
-		console.log('Is the DOI declared?', doiRegex.declared().test(doi))
-	} else if (flags.match !== true) {
+	if (flags.exact && flags.declared) {
 		console.log('Is this a declared DOI',
-			doiRegex.declared({expect: true}).test(doi))
+			doiRegex.declared({exact: true}).test(doi))
+	} else if (flags.exact && !flags.declared) {
+		console.log('Is this a DOI?', doiRegex({exact: true}).test(doi))
+	} else if (!flags.exact && flags.declared) {
+		console.log('Is the DOI declared?', doiRegex.declared().test(doi))
+	} else {
+		console.log('Does a DOI exist?', doiRegex().test(doi))
 	}
 }
-
