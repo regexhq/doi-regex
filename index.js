@@ -12,18 +12,21 @@ var doi = module.exports = function (opts) {
 }
 
 doi.groups = function (str) {
+	if (!str) { return }
 	// Javascript fails at lookaheads for optional groups. This circumvents that
 	// problem by just automatically removing and saving suffixes if they are in
 	// as specific format - .a000 is the format used by PLoS, but this may need
 	// to be filled out.
-	var suffixes = [];
-	var newStr = str.replace(/\.[a-zA-Z]{1}[0-9]{3}$/g, function(s){
+	var suffixes = []
+	var newStr = str.replace(/\.[a-zA-Z]{1}[0-9]{3}$/g, function (s) {
 		suffixes.push(s)
 		return ''
 	})
 	var match = doi().exec(newStr)
-	match[0] = str;
-	match.push((!!suffixes.length) ? suffixes[0] : '')
+	if (match) {
+		match[0] = str
+		match.push((!!suffixes.length) ? suffixes[0] : '')
+	}
 	return match
 }
 
