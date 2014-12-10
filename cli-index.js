@@ -2,51 +2,42 @@
 'use strict';
 
 var doiRegex = require('./')
-var _ = require('lodash')
+var argv = require('minimist')(process.argv.slice(2),  {
+    alias: {
+        e: 'exact',
+        d: 'declared',
+        m: 'match',
+        g: 'groups',
+        h: 'help'
+    },
+    boolean: ['e', 'd', 'm', 'g']
+});
 
-if (process.argv.length <= 2) {
-	console.error("Usage: " + process.argv[1] + " <doi>")
-	console.error("Flags: \n\
+console.log(argv);
+
+if (argv.h) {
+	console.error(
+	"Usage: " + process.argv[1] + " <doi> \n\
+	Options: \n\
 	-e, --exact	Find an exact match \n\
 	-d, --declared 	Find a DOI with a 'doi:' prefix\n\
 	-m, --match	Find all matches within the given string");
 	process.exit(-1)
 }
 
-// parse input
-var flags = {
-	"exact": ['-e', '--exact'],
-	"declared": ['-d', '--declared'],
-	"match": ['-m', '--match'],
-	"groups": ['-g', '--groups']
-};
+var doi = (argv.doi || argv._[0])
 
-for (var index in flags) {
-	_(flags[index]).each(function(arg) {
-		if (process.argv.indexOf(arg) != -1) {
-			process.argv.splice(process.argv.indexOf(arg), 1)
-			flags[index] = true
-		}
-	})
-
-	if (flags[index] !== true) {
-		flags[index] = null
-	}
-}
-
-var doi = process.argv[2];
-
-if (flags.match === true) {
+if (argv.m) {
 	console.log(doi.match(doiRegex()))
-} else if (flags.groups === true) {
+} else if (argv.g) {
 	console.log(doiRegex.groups(doi));
 } else {
-	if (flags.exact && flags.declared) {
+	if (argv.e && argv.d) {
 		console.log('Is this a declared DOI',
 			doiRegex.declared({exact: true}).test(doi))
-	} else if (flags.exact && !flags.declared) {
+	} else if (argv.e && !argv.d) {
 		console.log('Is this a DOI?', doiRegex({exact: true}).test(doi))
-	} else if (!flags.exact && flags.declared) {
+	} else if (!argv.e && argv.d) {
 		console.log('Is the DOI declared?', doiRegex.declared().test(doi))
 	} else {
 		console.log('Does a DOI exist?', doiRegex().test(doi))
