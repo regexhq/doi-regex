@@ -39,7 +39,7 @@
   "homepage": "https://github.com/BeagleLab/doi",
   "devDependencies": {
     "ava": "0.0.4",
-    "lodash": "^2.4.1"
+    "lodash": "^2.4.1",
     "minimist": "^1.1.0"
   }
 }
