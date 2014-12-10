@@ -2,6 +2,17 @@
 
 > Regular expression for matching DOIs
 
+Parts of a DOI:
+ * Directory Identifier: 10
+ * Registrant code: . + [0-9]{4,}
+ * Registrant subdivision (optional): . + [0-9]+
+ * Suffix: / + any character, case insensitive for ASCII chars (but capitalised
+	in the registry), with some characters that _should_ be escaped
+	Recommended encoding: ```"{}^[]`|\\&\/\'<>```
+ 	Mandatory encoding: ```%"#? ```(and space)
+
+From: http://www.doi.org/doi_handbook/2_Numbering.html#2.2
+
 
 ## Install
 
@@ -62,11 +73,9 @@ Useful with `RegExp#test` to check if a string is an DOI.
 A CLI file has been provided. Run any of the examples provided above using your own DOI. For instance: 
 
 ```sh
-$ node cli-index.js -e `10.000/xyz1000`
-true
+$ node cli-index.js -e 10.000/xyz1000
+//=> true
 ```
-
-Run it without arguments to see all possible flags.
 
 Possible Flags:
 
@@ -74,6 +83,7 @@ Possible Flags:
 * `-d`, `--declared` 	Find a DOI with a 'doi:' prefix
 * `-m`, `--match`	Find all matches within the given string
 * `-g`, `--groups` Find the stripped DOI and any suffix it might have
+* `-h`, `--help` Display usage
 
 ## License
 

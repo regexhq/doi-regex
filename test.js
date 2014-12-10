@@ -4,13 +4,17 @@ var _ = require('lodash')
 var doiRegex = require('./');
 
 var doi = [
-	'10.1371/journal.pone.0077056'
+	'10.0001/journal.pone.000001',
+	'10.0001/journal/pone.0011111',
+	'10.0001.112/journal.pone.0011021',
+	'10.0001/issn.10001'
 ];
 
 var doiNot = [
-	'10.1000//journal.pone.0011111',
 	'10..1000/journal.pone.0011111',
-	'1.1/1.1'
+	'1.1/1.1',
+	'10/134980',
+	'10.001/001#00'
 ];
 
 var doiDeclared = [

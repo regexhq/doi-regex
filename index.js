@@ -1,8 +1,20 @@
 'use strict';
 
+/**
+ * Parts of a DOI:
+ * Directory Identifier: 10
+ * Registrant code: . + [0-9]{4,}
+ * Registrant subdivision (optional): . + [0-9]+
+ * Suffix: / + any character, case insensitive for ASCII chars (but capitalised
+ * 	in the registry), with some characters that _should_ be escaped.
+ * 	Recommended encoding: "{}^[]`|\\&\/\'<>
+ * 	Mandatory encoding: %"#? (and space)
+ * From: http://www.doi.org/doi_handbook/2_Numbering.html#2.2
+ */
+
 // TODO Capture final segment for fragments
 // (\\.[a-zA-Z]{1}[0-9]{3})?
-var doiRegex = '(10[.][0-9]{4,}(?:[.][0-9]+)*/(?:(?!["&\/\'<>])\\S)+)'
+var doiRegex = '(10[.][0-9]{4,}(?:[.][0-9]+)*/(?:(?![%"#? ])\\S)+)'
 var doiTextPrefix = 'doi\\:'
 
 var doi = module.exports = function (opts) {
