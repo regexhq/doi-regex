@@ -1,10 +1,10 @@
 {
   "name": "doi-regex",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "description": "Regular expression for matching DOIs",
   "main": "index.js",
   "scripts": {
-    "test": "node test.js"
+    "test": "node test.js | node_modules/.bin/faucet"
   },
   "repository": {
     "type": "git",
@@ -38,8 +38,9 @@
   },
   "homepage": "https://github.com/BeagleLab/doi",
   "devDependencies": {
-    "ava": "0.0.4",
+    "faucet": "0.0.1",
     "lodash": "^2.4.1",
-    "minimist": "^1.1.0"
+    "minimist": "^1.1.0",
+    "tape": "^3.0.3"
   }
 }

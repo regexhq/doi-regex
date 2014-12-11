@@ -1,5 +1,6 @@
 'use strict';
-var test = require('ava')
+
+var test = require('tape')
 var _ = require('lodash')
 var doiRegex = require('./');
 
@@ -38,36 +39,42 @@ test('exact DOIs as passing', function (t) {
 	_(doi).each(function (el) {
 		t.assert(doiRegex({exact: true}).test(el), el)
 	})
+	t.end()
 })
 
 test('embeded DOIs as passing', function (t) {
 	_(doi).each(function (el) {
 		t.assert(doiRegex().exec('foo' + el)[0] === el, el)
 	})
+	t.end()
 })
 
 test('non-exact DOIs as failing', function (t) {
 	_(doiNot).each(function (el) {
 		t.assert(!doiRegex({exact: true}).test(el), el)
 	})
+	t.end()
 })
 
 test('DOI declared as passing', function (t) {
 	_(doiDeclared).each(function (el) {
 		t.assert(doiRegex.declared({exact: true}).test(el), el)
 	})
+	t.end()
 })
 
 test('DOI declared embeded as passing', function (t) {
 	_(doiDeclared).each(function (el) {
 		t.assert((doiRegex.declared().exec('foo' + el) || [])[0] === el, el)
 	})
+	t.end()
 })
 
 test('DOI not declared as failing', function (t) {
 	_(doiNotDeclared).each(function (el) {
 		t.assert(!doiRegex.declared({exact: true}).test(el), el)
 	})
+	t.end()
 })
 
 test('DOI group catching returns original', function (t) {
@@ -77,6 +84,7 @@ test('DOI group catching returns original', function (t) {
 	_(doi).each(function (el) {
 		t.assert(doiRegex.groups(el)[0] === el, el)
 	})
+	t.end()
 })
 
 test('DOI group catching returns DOI', function (t) {
@@ -86,6 +94,7 @@ test('DOI group catching returns DOI', function (t) {
 	_(doi).each(function (el) {
 		t.assert(doiRegex(doiRegex.groups(el)[1]), el)
 	})
+	t.end()
 })
 
 test('DOI group catching returns extension', function (t) {
@@ -95,4 +104,5 @@ test('DOI group catching returns extension', function (t) {
 	_(doi).each(function (el) {
 		t.assert(doiRegex.groups(el)[2].length === 0, el)
 	})
+	t.end()
 })
