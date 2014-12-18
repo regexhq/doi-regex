@@ -2,7 +2,7 @@
 
 var test = require('tape')
 var _ = require('lodash')
-var doiRegex = require('./');
+var doiRegex = require('../.');
 
 var doi = [
 	'10.0001/journal.pone.000001',

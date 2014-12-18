@@ -4,7 +4,7 @@
   "description": "Regular expression for matching DOIs",
   "main": "index.js",
   "scripts": {
-    "test": "node test.js | node_modules/.bin/faucet"
+    "test": "node spec/test.js | node_modules/.bin/faucet"
   },
   "repository": {
     "type": "git",
