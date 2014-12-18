@@ -1,7 +1,7 @@
 language: node_js
 node_js:
   - '0.10'
-after_scropt:
+after_script:
 	- cat coverage/lcov.info | codeclimate
 addons:
   code_climate:
