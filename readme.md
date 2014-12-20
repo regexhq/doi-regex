@@ -1,4 +1,5 @@
-# doi-regex [![Build Status](https://travis-ci.org/BeagleLab/doi-regex.svg?branch=master)](https://travis-ci.org/BeagleLab/doi-regex)
+# doi-regex 
+[![Build Status](https://travis-ci.org/BeagleLab/doi-regex.svg?branch=master)](https://travis-ci.org/BeagleLab/doi-regex) [![Test Coverage](https://codeclimate.com/github/BeagleLab/doi-regex/badges/coverage.svg)](https://codeclimate.com/github/BeagleLab/doi-regex)
 
 > Regular expression for matching DOIs
 
