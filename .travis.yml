@@ -2,9 +2,13 @@ language: node_js
 node_js:
   - '0.10'
 
+addons:
+  code_climate:
+    repo_token: a422a1696c17a5184d90637b08facc0496c55d7f3043a8d7afa2341f34633b86
+
 before_install:
   - "npm install -g codeclimate-test-reporter"
   - "npm install -g istanbul"
 
 after_script:
-  - CODECLIMATE_REPO_TOKEN=974e95cf44845d3e57f67cda00cefc2bf87689f6294325cfd94fcd0e1e43cf82 codeclimate < coverage/lcov.info
+  - codeclimate < coverage/lcov.info
