@@ -19,7 +19,8 @@ if (argv.h) {
 	"Options: \n" +
 	"-e, --exact	Find an exact match \n" +
 	"-d, --declared 	Find a DOI with a 'doi:' prefix\n" +
-	"-m, --match	Find all matches within the given string");
+	"-m, --match	Find all matches within the given string\n" +
+	"-g, --groups	Find matches with groupings for extra suffixes")
 	process.exit(-1)
 }
 
