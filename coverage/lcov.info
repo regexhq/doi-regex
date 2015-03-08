@@ -1,5 +1,5 @@
 TN:
-SF:/Users/richard/src/beaglelabs/doi-regex/spec/test.js
+SF:/Users/richard/src/doi-regex/spec/test.js
 FN:38,(anonymous_1)
 FN:39,(anonymous_2)
 FN:45,(anonymous_3)
@@ -102,7 +102,7 @@ BRF:2
 BRH:1
 end_of_record
 TN:
-SF:/Users/richard/src/beaglelabs/doi-regex/index.js
+SF:/Users/richard/src/doi-regex/index.js
 FN:20,(anonymous_1)
 FN:26,(anonymous_2)
 FN:33,(anonymous_3)
