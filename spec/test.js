@@ -19,7 +19,25 @@ var doiNot = [
 ]
 
 var doiDeclared = [
-  'doi:10.1000/journal.pone.0011111'
+  'doi:10.1000/journal.pone.0011111',
+]
+
+var doiResolvePathWithoutProtocol = [
+  'dx.doi.org/10.1016/j.neuron.2014.09.004'
+]
+
+var doiResolvePathWithProtocol = [
+  'http://dx.doi.org/10.1016/j.neuron.2014.09.004',
+  'https://dx.doi.org/10.1016/j.neuron.2014.09.004'
+]
+
+var doiResolvePathInvalid = [
+  'dxsdfas.doi.org/10.1016/j.neuron.2014.09.004'
+]
+
+var doiResolvePathWithProtocolInvalid = [
+  'httpp://dx.doi.org/10.1016/j.neuron.2014.09.004',
+  'ftp://dx.doi.org/10.1016/j.neuron.2014.09.004',
 ]
 
 var doiNotDeclared = [
@@ -73,6 +91,29 @@ test('DOI declared embeded as passing', function (t) {
 test('DOI not declared as failing', function (t) {
   _(doiNotDeclared).each(function (el) {
     t.assert(!doiRegex.declared({exact: true}).test(el), el)
+  })
+  t.end()
+})
+
+test('DOI with resolve path as passing', function (t) {
+  _(doiResolvePathWithoutProtocol).each(function (el) {
+    t.assert(doiRegex.resolvePath().test(el), el)
+  })
+  _(doiResolvePathInvalid).each(function (el) {
+    t.assert(!doiRegex.resolvePath().test(el), el)
+  })
+  t.end()
+})
+
+test('DOI with resolve path and protocol mandatory as passing', function (t) {
+  _(doiResolvePathWithoutProtocol).each(function (el) {
+    t.assert(!doiRegex.resolvePath({protocol: true}).test(el), el)
+  })
+  _(doiResolvePathWithProtocol).each(function (el) {
+    t.assert(doiRegex.resolvePath({protocol: true}).test(el), el)
+  })
+  _(doiResolvePathWithProtocolInvalid).each(function (el) {
+    t.assert(!doiRegex.resolvePath({protocol: true}).test(el), el)
   })
   t.end()
 })

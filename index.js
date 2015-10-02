@@ -47,3 +47,9 @@ doi.declared = function (opts) {
   return opts.exact ? new RegExp('^' + doiTextPrefix + doiRegex + '$') :
                       new RegExp(doiTextPrefix + doiRegex, 'g')
 }
+
+doi.resolvePath = function (opts) {
+  opts = opts || {}
+  return opts.protocol ? new RegExp('^http(s)?\\://dx\\.doi\\.org/' + doiRegex + '$') :
+    new RegExp('^(http(s)?\\://)?dx\\.doi\\.org/' + doiRegex + '$')
+}
