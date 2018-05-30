@@ -1,5 +1,6 @@
 # doi-regex 
-[![Build Status](https://travis-ci.org/regexps/doi-regex.svg?branch=master)](https://travis-ci.org/regexps/doi-regex) [![Test Coverage](https://codeclimate.com/github/regexps/doi-regex/badges/coverage.svg)](https://codeclimate.com/github/regexps/doi-regex)
+
+[![Build Status](https://travis-ci.org/regexhq/doi-regex.svg?branch=master)](https://travis-ci.org/regexhq/doi-regex)
 
 > Regular expression for matching DOIs
 
@@ -85,6 +86,10 @@ Possible Flags:
 * `-m`, `--match`	Find all matches within the given string
 * `-g`, `--groups` Find the stripped DOI and any suffix it might have
 * `-h`, `--help` Display usage
+
+## Contribute
+
+Please do!
 
 ## License
 
