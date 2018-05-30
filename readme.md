@@ -1,6 +1,7 @@
 # doi-regex 
 
 [![Build Status](https://travis-ci.org/regexhq/doi-regex.svg?branch=master)](https://travis-ci.org/regexhq/doi-regex)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fregexhq%2Fdoi-regex.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fregexhq%2Fdoi-regex?ref=badge_shield)
 
 > Regular expression for matching DOIs
 
@@ -94,3 +95,6 @@ Please do!
 ## License
 
 MIT © [Richard Littauer](http://burntfen.com)
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fregexhq%2Fdoi-regex.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fregexhq%2Fdoi-regex?ref=badge_large)
