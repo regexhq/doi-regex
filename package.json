@@ -1,6 +1,6 @@
 {
   "name": "doi-regex",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Regular expression for matching DOIs",
   "main": "index.js",
   "scripts": {
