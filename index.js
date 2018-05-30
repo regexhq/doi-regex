@@ -50,6 +50,6 @@ doi.declared = function (opts) {
 
 doi.resolvePath = function (opts) {
   opts = opts || {}
-  return opts.protocol ? new RegExp('^http(s)?\\://(dx\\.)?doi\\.org/' + doiRegex + '$') :
-    new RegExp('^(http(s)?\\://)?(dx\\.)?doi\\.org/' + doiRegex + '$')
+  return opts.protocol ? new RegExp('^http(s)?\\://dx\\.doi\\.org/' + doiRegex + '$') :
+    new RegExp('^(http(s)?\\://)?dx\\.doi\\.org/' + doiRegex + '$')
 }

@@ -20,7 +20,7 @@ if (argv.h) {
   'Options: \n' +
   '-e, --exact  Find an exact match \n' +
   '-d, --declared   Find a DOI with a `doi:` prefix\n' +
-  '-r, --resolvePath  Find a DOI with a `https://doi.org` or `https://dx.doi.org` prefix\n' +
+  '-r, --resolvePath  Find a DOI with a `https://dx.doi.org` prefix\n' +
   '-m, --match  Find all matches within the given string\n' +
   '-g, --groups  Find matches with groupings for extra suffixes')
   process.exit(-1)

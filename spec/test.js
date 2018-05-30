@@ -24,14 +24,11 @@ var doiDeclared = [
 
 var doiResolvePathWithoutProtocol = [
   'dx.doi.org/10.1016/j.neuron.2014.09.004'
-  'doi.org/10.1016/j.neuron.2014.09.004'
 ]
 
 var doiResolvePathWithProtocol = [
   'http://dx.doi.org/10.1016/j.neuron.2014.09.004',
-  'https://dx.doi.org/10.1016/j.neuron.2014.09.004',
-  'http://doi.org/10.1016/j.neuron.2014.09.004',
-  'https://doi.org/10.1016/j.neuron.2014.09.004'
+  'https://dx.doi.org/10.1016/j.neuron.2014.09.004'
 ]
 
 var doiResolvePathInvalid = [
@@ -40,9 +37,7 @@ var doiResolvePathInvalid = [
 
 var doiResolvePathWithProtocolInvalid = [
   'httpp://dx.doi.org/10.1016/j.neuron.2014.09.004',
-  'httpp://doi.org/10.1016/j.neuron.2014.09.004',
   'ftp://dx.doi.org/10.1016/j.neuron.2014.09.004',
-  'ftp://doi.org/10.1016/j.neuron.2014.09.004',
 ]
 
 var doiNotDeclared = [
