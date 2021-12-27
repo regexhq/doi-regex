@@ -11,6 +11,10 @@ var doi = [
   '10.0001/issn.10001'
 ]
 
+var doiOlderFormat = [
+  '10.1002/(SICI)1096-8644(199808)106:4<483::AID-AJPA4>3.0.CO;2-K' // one of 300K DOIs from Wiley - see https://www.crossref.org/blog/dois-and-matching-regular-expressions/ for more info
+]
+
 var doiNot = [
   '10..1000/journal.pone.0011111',
   '1.1/1.1',
@@ -60,6 +64,13 @@ var doiGroups = [
 
 test('exact DOIs as passing', function (t) {
   _(doi).each(function (el) {
+    t.assert(doiRegex({exact: true}).test(el), el)
+  })
+  t.end()
+})
+
+test('older format DOIs as passing', function (t) {
+  _(doiOlderFormat).each(function (el) {
     t.assert(doiRegex({exact: true}).test(el), el)
   })
   t.end()
