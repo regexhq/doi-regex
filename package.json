@@ -42,7 +42,7 @@
     "istanbul": "^0.4.5",
     "lodash": "^4.16.5",
     "minimist": "^1.1.0",
-    "standard": "^8.5.0",
+    "standard": "^16.0.4",
     "tape": "^4.6.2"
   }
 }
