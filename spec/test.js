@@ -8,7 +8,8 @@ var doi = [
   '10.0001/journal.pone.000001',
   '10.0001/journal/pone.0011111',
   '10.0001.112/journal.pone.0011021',
-  '10.0001/issn.10001'
+  '10.0001/issn.10001',
+  '10.10.123/456'
 ]
 
 var doiOlderFormat = [
