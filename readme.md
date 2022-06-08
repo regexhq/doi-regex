@@ -7,7 +7,7 @@
 
 Parts of a DOI:
  * Directory Identifier: 10
- * Registrant code: . + [0-9]{4,}
+ * Registrant code: . + [0-9]{2,}
  * Registrant subdivision (optional): . + [0-9]+
  * Suffix: / + any character, case insensitive for ASCII chars (but capitalised
 	in the registry), with some characters that _should_ be escaped  
