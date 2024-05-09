@@ -1,0 +1,33 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: doi-regex
+message: Regular expression for matching DOIs
+type: software
+authors:
+  - given-names: Richard
+    family-names: Littauer
+    orcid: 'https://orcid.org/0000-0001-5428-7535'
+  - given-names: Katrin
+    family-names: Leinweber
+    orcid: 'https://orcid.org/0000-0001-5135-5758'
+  - family-names: ' b1f6c1c4 '
+  - given-names: Chris
+    family-names: Wilkinson
+    orcid: 'https://orcid.org/0000-0003-4921-6155'
+  - given-names: Karl
+    family-names: Becker
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.11164918
+    description: Zenodo DOI
+repository-code: 'https://github.com/regexhq/doi-regex'
+abstract: Regular expression for matching DOIs.
+keywords:
+  - doi
+  - regex
+license: MIT
+commit: 320096e7fd6d1663719b009fcd7572496181f9fa
+version: 0.1.13
+date-released: '2024-05-09'
