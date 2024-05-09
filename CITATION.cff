@@ -18,6 +18,7 @@ authors:
     orcid: 'https://orcid.org/0000-0003-4921-6155'
   - given-names: Karl
     family-names: Becker
+    orcid: 'https://orcid.org/0009-0002-2714-7988'
 identifiers:
   - type: doi
     value: 10.5281/zenodo.11164918
