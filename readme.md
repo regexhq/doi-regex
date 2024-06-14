@@ -1,7 +1,7 @@
 # doi-regex
 
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fregexhq%2Fdoi-regex.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fregexhq%2Fdoi-regex?ref=badge_shield)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.11197208.svg)](https://doi.org/10.5281/zenodo.11197208)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.11164917.svg)](https://zenodo.org/doi/10.5281/zenodo.11164917)
 
 > Regular expression for matching DOIs
 
