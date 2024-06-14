@@ -33,7 +33,8 @@
     "Richard Littauer",
     "Katrin Leinweber",
     "Chris Wilkinson",
-    "Karl Becker"
+    "Karl Becker",
+    "b1f6c1c4"
   ],
   "engines": {
     "node": ">=0.10.0"
