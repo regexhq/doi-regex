@@ -1,6 +1,6 @@
 {
   "name": "doi-regex",
-  "version": "0.1.14",
+  "version": "0.1.15",
   "description": "Regular expression for matching DOIs",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:BeagleLab/doi.git"
+    "url": "git@github.com:regexhq/doi-regex.git"
   },
   "keywords": [
     "doi",
@@ -26,17 +26,23 @@
   ],
   "author": {
     "name": "Richard Littauer",
-    "email": "richard.littauer@gmail.com",
+    "email": "richard@burntfen.com",
     "url": "http://www.burntfen.com"
   },
+  "contributors": [
+    "Richard Littauer",
+    "Katrin Leinweber",
+    "Chris Wilkinson",
+    "Karl Becker"
+  ],
   "engines": {
     "node": ">=0.10.0"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/BeagleLab/doi/issues"
+    "url": "https://github.com/regexhq/doi-regex/issues"
   },
-  "homepage": "https://github.com/BeagleLab/doi",
+  "homepage": "https://github.com/regexhq/doi-regex",
   "devDependencies": {
     "faucet": "0.0.1",
     "istanbul": "^0.4.5",
