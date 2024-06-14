@@ -31,5 +31,5 @@ keywords:
   - regex
 license: MIT
 commit: 320096e7fd6d1663719b009fcd7572496181f9fa
-version: 0.1.13
-date-released: '2024-05-15'
+version: 0.1.16
+date-released: '2024-06-14'
